@@ -29,11 +29,25 @@ input[type="select"] {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
+    
     .body-content {
         padding: 0;
     }
 }
- 
+#wrap {
+    text-align:center;
+    
+    
+}
+#wrap h1{
+    color: #E51937;
+}
+#userInfo{
+
+    
+}
+.nav, .navbar-inverse,navbar-brand, .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a
+{
+    background-color: #E51937;
+    color: white;
+}
