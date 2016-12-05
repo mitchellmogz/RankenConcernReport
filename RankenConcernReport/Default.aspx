@@ -1,43 +1,121 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="RankenConcernReport._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+   
     <div class="jumbotron">
-        <h1>Concern</h1>
-        <p class="lead">READ ME!!!! *this is a test to see if the database file in the App_Data folder will be pushed with this change.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-        <asp:SqlDataSource ID="sqlConcernReport" runat="server" ConnectionString="<%$ ConnectionStrings:ConcernReportConnectionString %>" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
+        <h1>Concern Report</h1>
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
+ <div id="wrap">
+            <div id="body">
+            <div id="topReport">
+                <div id="personConcern">
+                    &nbsp Name of Person with Concern:
+                    <br />
+                    &nbsp First Name: <input id="firstName" type="text" />
+                    &nbsp Last Name: <input id="lastName" type="text" />
+                    <br />
+                    <br />
+                </div>
+                    
+                 
+                <div id="staffCompletedForm">
+                    &nbsp Staff Member Who Took Concern & Completing this Form: <br />
+                    &nbsp First Name: <input id="completedFormFirstName" type="text" />
+                    &nbsp Last Name: <input id="completedFormLastName" type="text" /><br />
+                </div>
+ 
+ 
+                <div id="dateDiv">
+                    &nbsp Date: 
+                    <input id="concernDate" type="text" />
+                </div>
+ 
+                <div id="contactInfo">
+                    &nbsp Contact Information<br />
+                    &nbsp Phone Number: <input id="CIPhoneNumber" type="text" />
+                    &nbsp E-Mail: <input id="CIEmail" type="text" /><br />
+                </div>
+            </div>
+ 
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                 
+        <div id="middleForm">
+            <div id="whoComplainTo">
+               &nbsp Who was compained to?<br />
+               &nbsp First Name: <input id="whoRecievedFirst" type="text" />
+               &nbsp Last Name: <input id="whoRecievedLast" type="text" /><br />
+                <br />
+            </div>
+ 
+            <div id="reasonConcern">
+               &nbsp What was the concern?<br />
+               &nbsp <input id="rasonForConcern" type="text" />
+            </div>
+ 
+            <div id="detailedConcern">
+               &nbsp Provide Details of Concern: <br />
+               &nbsp <textarea id="detailsConcern" cols="40" name="S2" rows="2"></textarea><br />
+            </div>
+ 
+            <div id="actionConcern">
+               &nbsp Where there any actions taken and by whom?<br />
+               &nbsp <textarea id="actionsTaken" cols="40" name="S3" rows="2"></textarea><br />    
+            </div>
+ 
+            <div id="dropDownListMade">
+               &nbsp How was the concern made?<br />
+               &nbsp <asp:DropDownList ID="DropDownList1" runat="server">
+               </asp:DropDownList>
+            </div>
+ 
+            <div id="dropDownListRelationship">
+               &nbsp Person of Concern Relationship to Institution:<br />
+               &nbsp <asp:DropDownList ID="DropDownList2" runat="server">
+               </asp:DropDownList>
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+ 
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+ 
+        <div id="bottomForm">
+             
+            <div id="resolvedOutcomeDiv">
+               &nbsp Was it resolved and if so what was the outcome?<br />
+               &nbsp <textarea id="resolvedOutcome" cols="40" name="S4" rows="2"></textarea><br />
+            </div>
+ 
+            <div id="whoSaved">
+                <br />
+                &nbsp Who provided the resolution and/or outcome?<br />
+                &nbsp First Name: <input id="whoResolvedFirst" type="text" />
+                &nbsp First Last: <input id="whoResolvedLast" type="text" />
+            </div>
+ 
+            <div id="dateResolvedDiv">
+                <br />
+                &nbsp Date of Resolution:<br />
+                &nbsp <input id="dateResolved" type="text" /><br />
+            </div>
         </div>
     </div>
+</div>
 
 </asp:Content>
