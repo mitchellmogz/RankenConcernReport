@@ -27,6 +27,7 @@
                         <asp:HyperLink NavigateUrl="/Account/ManageLogins" Text="[Manage]" runat="server" />
 
                     </dd>
+                   
                     <%--
                         Phone Numbers can used as a second factor of verification in a two-factor authentication system.
                         See <a href="http://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
