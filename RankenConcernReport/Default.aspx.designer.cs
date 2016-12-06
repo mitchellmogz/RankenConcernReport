@@ -13,6 +13,15 @@ namespace RankenConcernReport {
     public partial class _Default {
         
         /// <summary>
+        /// sqlConcernConnectionString control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqlConcernConnectionString;
+        
+        /// <summary>
         /// FirstName control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace RankenConcernReport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox FirstName;
+        
+        /// <summary>
+        /// twFname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender twFname;
         
         /// <summary>
         /// LastName control.
@@ -31,6 +49,15 @@ namespace RankenConcernReport {
         protected global::System.Web.UI.WebControls.TextBox LastName;
         
         /// <summary>
+        /// twLname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender twLname;
+        
+        /// <summary>
         /// Phone control.
         /// </summary>
         /// <remarks>
@@ -38,6 +65,15 @@ namespace RankenConcernReport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Phone;
+        
+        /// <summary>
+        /// twPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender twPhone;
         
         /// <summary>
         /// Email control.
@@ -49,6 +85,15 @@ namespace RankenConcernReport {
         protected global::System.Web.UI.WebControls.TextBox Email;
         
         /// <summary>
+        /// twEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender twEmail;
+        
+        /// <summary>
         /// relationship control.
         /// </summary>
         /// <remarks>
@@ -58,22 +103,40 @@ namespace RankenConcernReport {
         protected global::System.Web.UI.WebControls.DropDownList relationship;
         
         /// <summary>
-        /// concern control.
+        /// Concern control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox concern;
+        protected global::System.Web.UI.WebControls.TextBox Concern;
         
         /// <summary>
-        /// details control.
+        /// twConcern control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox details;
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender twConcern;
+        
+        /// <summary>
+        /// Details control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Details;
+        
+        /// <summary>
+        /// twDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.TextBoxWatermarkExtender twDetails;
         
         /// <summary>
         /// concernMade control.
@@ -83,6 +146,15 @@ namespace RankenConcernReport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList concernMade;
+        
+        /// <summary>
+        /// followUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList followUp;
         
         /// <summary>
         /// Button1 control.

@@ -1,40 +1,31 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="RankenConcernReport._Default" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-   <script>
-               function ShowWatermark(textBox, waterMark) {
-                        if (textBox.value.length == 0) {
-                                textBox.value = waterMark;
-                        }
-                }
- 
-                function HideWatermark(textBox, waterMark) {
-                        if (textBox.value.length == 0)
-                                textBox.value = waterMark;
-                        else if (textBox.value == waterMark)
-                                textBox.value = '';
-                }
-        </script>
- 
-        
-
+     <a href="Content/Site.css" rel="stylesheet" type="text/css"></a>
+    <asp:SqlDataSource ID="sqlConcernConnectionString" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ConcernReportDatabase.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
  <div id="wrap">
-
   <div id="userInfo">
       <h1>Your Information</h1>
-      <asp:TextBox ID="FirstName" runat="server" Text='First Name' onfocus="HideWatermark(this,'First Name')"
-      onblur="ShowWatermark(this,'First Name')"></asp:TextBox>
+      <asp:TextBox ID="FirstName" runat="server"></asp:TextBox>
+      <ajaxToolkit:TextBoxWatermarkExtender ID="twFname" runat="server" TargetControlID="FirstName"
+      WatermarkText="Enter Your First Name" />
     
-        <asp:TextBox ID="LastName" runat="server" Text='Last Name' onfocus="HideWatermark(this,'Last Name')"
-      onblur="ShowWatermark(this,'Last Name')"></asp:TextBox>
+        <asp:TextBox ID="LastName" runat="server"></asp:TextBox>
+      <ajaxToolkit:TextBoxWatermarkExtender ID="twLname" runat="server" TargetControlID="LastName"
+      WatermarkText="Enter Your Last Name" />
        <br />
       <br />
-       <asp:TextBox ID="Phone" runat="server" Text='Phone Number' onfocus="HideWatermark(this,'Phone Number')"
-      onblur="ShowWatermark(this,'Phone Number')"></asp:TextBox>
+       <asp:TextBox ID="Phone" runat="server"></asp:TextBox>
+      <ajaxToolkit:TextBoxWatermarkExtender ID="twPhone" runat="server" TargetControlID="Phone"
+      WatermarkText="Enter Your Phone Number" />
   
-       <asp:TextBox ID="Email" runat="server" Text='Email' onfocus="HideWatermark(this,'Email')"
-      onblur="ShowWatermark(this,'Email')"></asp:TextBox>
+       <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+      <ajaxToolkit:TextBoxWatermarkExtender ID="twEmail" runat="server" TargetControlID="Email"
+      WatermarkText="Enter Your Email" />
        <br />
       <br />
         <p>Relationship to the concern </p><asp:DropDownList ID="relationship" runat="server">
@@ -46,12 +37,14 @@
          </asp:DropDownList>
 
   </div>
-     <div id="Concern">
+     <div id="ConcernDiv">
          <h1>Your Concern</h1>
-        <asp:textbox id="concern" form="Feedback_Form" CssClass="Contact_Input" maxlength="1200" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px" Text='What is the Concern' onfocus="HideWatermark(this,'What is the Concern')"
-      onblur="ShowWatermark(this,'What is the Concern')"/>
-         <asp:textbox id="details" form="Feedback_Form" CssClass="Contact_Input" maxlength="1200" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px" Text='Provide Details of Concern' onfocus="HideWatermark(this,'Provide Details of Concern')"
-      onblur="ShowWatermark(this,'Provide Details of Concern')"/>
+        <asp:TextBox ID="Concern" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
+        <ajaxToolkit:TextBoxWatermarkExtender ID="twConcern" runat="server" TargetControlID="Concern"
+      WatermarkText="What is your Concern?" />
+         <asp:TextBox ID="Details" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
+         <ajaxToolkit:TextBoxWatermarkExtender ID="twDetails" runat="server" TargetControlID="Details"
+      WatermarkText="Please Provide Details of Concern" />
           <br />
       <br />
          <p>How was the concern made?</p>
@@ -65,9 +58,17 @@
          </asp:DropDownList>
           <br />
        <br />
+
+         <p>Would you like a follow up?</p>
+         <asp:DropDownList ID="followUp" runat="server">
+             <asp:ListItem>Yes</asp:ListItem>
+             <asp:ListItem>No</asp:ListItem>
+         </asp:DropDownList>
       
+         <br />
+         <br />
          
-         <asp:Button ID="Button1" runat="server" Text="Submit Concern" />
+         <asp:Button ID="Button1" runat="server" Text="Submit Concern" OnClick="Button1_Click" />
 
      </div>
 </div>
