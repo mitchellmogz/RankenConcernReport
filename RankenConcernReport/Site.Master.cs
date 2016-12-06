@@ -69,7 +69,16 @@ namespace RankenConcernReport
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            String path = HttpContext.Current.Request.Url.AbsolutePath;
 
+            if (path == "/Account/Manage")
+            {
+                divHideThis.Visible = true;
+            }
+           else
+            {
+                divHideThis.Visible = false;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
