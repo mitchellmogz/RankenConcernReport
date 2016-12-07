@@ -47,6 +47,7 @@ namespace RankenConcernReport
             cmd.ExecuteNonQuery();
             con.Close();
 
+            Response.Redirect("~/Contact");
         }
     }
 }

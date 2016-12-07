@@ -92,7 +92,7 @@ namespace RankenConcernReport
             }
             else
             {
-                response.Redirect("~/");
+                response.Redirect("~/Account/Manage");
             }
         }
     }

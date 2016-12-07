@@ -28,7 +28,7 @@
       WatermarkText="Enter Your Email" />
        <br />
       <br />
-        <p>Relationship to the concern </p><asp:DropDownList ID="relationship" runat="server">
+        <p>What is your relationship to the college?</p><asp:DropDownList ID="relationship" runat="server">
              <asp:ListItem>Student</asp:ListItem>
              <asp:ListItem>Parent</asp:ListItem>
              <asp:ListItem>Employee</asp:ListItem>
@@ -47,7 +47,7 @@
       WatermarkText="Please Provide Details of Concern" />
           <br />
       <br />
-         <p>How was the concern made?</p>
+         <p>How did you initially make your concern?</p>
          <asp:DropDownList ID="concernMade" runat="server">
              <asp:ListItem>Phone</asp:ListItem>
              <asp:ListItem>Email</asp:ListItem>

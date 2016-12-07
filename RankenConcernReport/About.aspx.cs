@@ -37,7 +37,7 @@ namespace RankenConcernReport
         private void rep_bind()
         {
             connection();
-            string query = "select * from [User] where FirstName like'" + txtBoxSearch.Text + "%'";
+            string query = "select * from [User] where " + ddlCategory.SelectedValue + " like'" + txtBoxSearch.Text + "%'";
 
             SqlDataAdapter da = new SqlDataAdapter(query, con);
             DataSet ds = new DataSet();
@@ -51,7 +51,7 @@ namespace RankenConcernReport
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             connection();
-            string query = "select FirstName from [User] where FirstName like'" + txtBoxSearch.Text + "%'";
+            string query = "select " + ddlCategory.SelectedValue + " from [User] where " + ddlCategory.SelectedValue + " like'" + txtBoxSearch.Text + "%'";
             SqlCommand com = new SqlCommand(query, con);
 
             SqlDataReader dr;
