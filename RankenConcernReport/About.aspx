@@ -28,7 +28,7 @@
     <asp:GridView ID="gvDatabase" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="ConcernID" DataSourceID="sqlDataSourceDatabase" ForeColor="Black" GridLines="Vertical" Width="1006px">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
             <asp:BoundField DataField="ConcernID" HeaderText="ConcernID" InsertVisible="False" ReadOnly="True" SortExpression="ConcernID" />
             <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
             <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />

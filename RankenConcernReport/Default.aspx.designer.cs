@@ -40,6 +40,24 @@ namespace RankenConcernReport {
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twFname;
         
         /// <summary>
+        /// rfvFirstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstname;
+        
+        /// <summary>
+        /// vcFname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender vcFname;
+        
+        /// <summary>
         /// LastName control.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,24 @@ namespace RankenConcernReport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twLname;
+        
+        /// <summary>
+        /// rfvLastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastname;
+        
+        /// <summary>
+        /// vcLname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender vcLname;
         
         /// <summary>
         /// Phone control.
@@ -76,6 +112,24 @@ namespace RankenConcernReport {
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twPhone;
         
         /// <summary>
+        /// rfvPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
+        
+        /// <summary>
+        /// vcPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender vcPhone;
+        
+        /// <summary>
         /// Email control.
         /// </summary>
         /// <remarks>
@@ -92,6 +146,24 @@ namespace RankenConcernReport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twEmail;
+        
+        /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+        
+        /// <summary>
+        /// vcEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender vcEmail;
         
         /// <summary>
         /// relationship control.
@@ -121,6 +193,24 @@ namespace RankenConcernReport {
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twConcern;
         
         /// <summary>
+        /// rfvConcern control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvConcern;
+        
+        /// <summary>
+        /// vcConcern control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender vcConcern;
+        
+        /// <summary>
         /// Details control.
         /// </summary>
         /// <remarks>
@@ -137,6 +227,24 @@ namespace RankenConcernReport {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.TextBoxWatermarkExtender twDetails;
+        
+        /// <summary>
+        /// rfvConcernDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvConcernDetails;
+        
+        /// <summary>
+        /// vcConcernDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender vcConcernDetails;
         
         /// <summary>
         /// concernMade control.
