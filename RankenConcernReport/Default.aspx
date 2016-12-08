@@ -6,10 +6,14 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
      <a href="Content/Site.css" rel="stylesheet" type="text/css"></a>
+    
     <asp:SqlDataSource ID="sqlConcernConnectionString" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\ConcernReportDatabase.mdf;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [User]"></asp:SqlDataSource>
- <div id="wrap">
+ <div id="tight">
+     <img alt="logo" class="img-fluid" src="Ranken%20Logos/2DRedOnWhite.jpg" style="width: 800px; height: 293px" />
+    &nbsp;</div>
+     <div id="wrap">
   <div id="userInfo">
-      <h1>Your Information</h1>
+      <h1>Contact Information</h1>
       <asp:TextBox ID="FirstName" runat="server"></asp:TextBox>
       <ajaxToolkit:TextBoxWatermarkExtender ID="twFname" runat="server" TargetControlID="FirstName"
       WatermarkText="Enter Your First Name" />
@@ -58,54 +62,44 @@
              <asp:ListItem>Other</asp:ListItem>
          </asp:DropDownList>
 
-  </div>
-     <div id="ConcernDiv">
-         <h1>Your Concern</h1>
-        <asp:TextBox ID="Concern" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
-        <ajaxToolkit:TextBoxWatermarkExtender ID="twConcern" runat="server" TargetControlID="Concern"
+      <h1>Concern</h1>
+      <asp:TextBox ID="Concern" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
+      <ajaxToolkit:TextBoxWatermarkExtender ID="twConcern" runat="server" TargetControlID="Concern"
       WatermarkText="What is your Concern?" />
-
-         <asp:RequiredFieldValidator ID="rfvConcern" runat="server" ErrorMessage="Enter Your Concern"
+      <asp:RequiredFieldValidator ID="rfvConcern" runat="server" ErrorMessage="Enter Your Concern"
                                             ControlToValidate= "Concern" Display="None" ValidationGroup="vgCheck" />
-
       <ajaxToolkit:ValidatorCalloutExtender ID="vcConcern" runat="server" TargetControlID="rfvConcern" />
-
-         <asp:TextBox ID="Details" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
-         <ajaxToolkit:TextBoxWatermarkExtender ID="twDetails" runat="server" TargetControlID="Details"
+      <asp:TextBox ID="Details" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
+      <ajaxToolkit:TextBoxWatermarkExtender ID="twDetails" runat="server" TargetControlID="Details"
       WatermarkText="Please Provide Details of Concern" />
-
-         <asp:RequiredFieldValidator ID="rfvConcernDetails" runat="server" ErrorMessage="Enter the Conern Details"
+      <asp:RequiredFieldValidator ID="rfvConcernDetails" runat="server" ErrorMessage="Enter the Conern Details"
                                             ControlToValidate= "Details" Display="None" ValidationGroup="vgCheck" />
-
       <ajaxToolkit:ValidatorCalloutExtender ID="vcConcernDetails" runat="server" TargetControlID="rfvConcernDetails" />
-
-          <br />
-
       <br />
-         <p>How did you initially make your concern?</p>
-         <asp:DropDownList ID="concernMade" runat="server">
-             <asp:ListItem>Phone</asp:ListItem>
-             <asp:ListItem>Email</asp:ListItem>
-             <asp:ListItem>Letter</asp:ListItem>
-             <asp:ListItem>In Person</asp:ListItem>
-             <asp:ListItem>HLC</asp:ListItem>
-             <asp:ListItem>Website</asp:ListItem>
-         </asp:DropDownList>
-          <br />
-       <br />
+      <br />
+      <p>
+          How did you initially make your concern?</p>
+      <asp:DropDownList ID="concernMade" runat="server">
+          <asp:ListItem>Phone</asp:ListItem>
+          <asp:ListItem>Email</asp:ListItem>
+          <asp:ListItem>Letter</asp:ListItem>
+          <asp:ListItem>In Person</asp:ListItem>
+          <asp:ListItem>HLC</asp:ListItem>
+          <asp:ListItem>Website</asp:ListItem>
+      </asp:DropDownList>
+      <br />
+      <br />
+      <p>
+          Would you like a follow up?</p>
+      <asp:DropDownList ID="followUp" runat="server">
+          <asp:ListItem>Yes</asp:ListItem>
+          <asp:ListItem>No</asp:ListItem>
+      </asp:DropDownList>
+      <br />
+      <br />
+      <asp:Button ID="Button1" runat="server" Text="Submit Concern" OnClick="Button1_Click" ValidationGroup="vgCheck" />
 
-         <p>Would you like a follow up?</p>
-         <asp:DropDownList ID="followUp" runat="server">
-             <asp:ListItem>Yes</asp:ListItem>
-             <asp:ListItem>No</asp:ListItem>
-         </asp:DropDownList>
-      
-         <br />
-         <br />
-         
-         <asp:Button ID="Button1" runat="server" Text="Submit Concern" OnClick="Button1_Click" ValidationGroup="vgCheck" />
-
-     </div>
+  </div>
 </div>
 
 </asp:Content>
