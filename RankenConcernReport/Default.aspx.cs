@@ -9,6 +9,8 @@ using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Net;
+using System.Net.Mail;
 
 namespace RankenConcernReport
 {
@@ -30,6 +32,7 @@ namespace RankenConcernReport
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
             con.Open();
             SqlCommand cmd = new SqlCommand("db_ins", con);
             cmd.CommandType = CommandType.StoredProcedure;
