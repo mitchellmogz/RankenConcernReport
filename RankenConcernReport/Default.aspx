@@ -14,7 +14,7 @@
      <div id="wrap">
   <div id="userInfo">
       <h1>Contact Information</h1>
-      <asp:TextBox ID="FirstName" runat="server"></asp:TextBox>
+      <asp:TextBox ID="FirstName" runat="server"></asp:TextBox> 
       <ajaxToolkit:TextBoxWatermarkExtender ID="twFname" runat="server" TargetControlID="FirstName"
       WatermarkText="Enter Your First Name" />
 
