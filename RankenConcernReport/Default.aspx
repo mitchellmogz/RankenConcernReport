@@ -69,12 +69,14 @@
       <asp:RequiredFieldValidator ID="rfvConcern" runat="server" ErrorMessage="Enter Your Concern"
                                             ControlToValidate= "Concern" Display="None" ValidationGroup="vgCheck" />
       <ajaxToolkit:ValidatorCalloutExtender ID="vcConcern" runat="server" TargetControlID="rfvConcern" />
-      <asp:TextBox ID="Details" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
+      <!--THIS IS THE DETAILS BLOCK WHICH WAS REMOVED BUT CAN STILL BE IMPLEMENTED BACK>
+          <asp:TextBox ID="Details" CssClass="Contact_Input" lines="10" cols="10" wrap="true" TextMode="MultiLine" runat="server" Height="81px" Width="215px"/>
       <ajaxToolkit:TextBoxWatermarkExtender ID="twDetails" runat="server" TargetControlID="Details"
       WatermarkText="Please Provide Details of Concern" />
       <asp:RequiredFieldValidator ID="rfvConcernDetails" runat="server" ErrorMessage="Enter the Conern Details"
                                             ControlToValidate= "Details" Display="None" ValidationGroup="vgCheck" />
       <ajaxToolkit:ValidatorCalloutExtender ID="vcConcernDetails" runat="server" TargetControlID="rfvConcernDetails" />
+      <-->
       <br />
       <br />
       <p>

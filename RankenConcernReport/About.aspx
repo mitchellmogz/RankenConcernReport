@@ -17,7 +17,6 @@
              <asp:ListItem Value="Relationship">Relationship</asp:ListItem>
              <asp:ListItem Value="InputDate">Date</asp:ListItem>
              <asp:ListItem Value="Concern">Concern</asp:ListItem>
-             <asp:ListItem Value="ConcernDetails">Concern Details</asp:ListItem>
              <asp:ListItem Value="ConcernMade">Concern Made</asp:ListItem>
              <asp:ListItem Value="FollowUp">Follow Up</asp:ListItem>
              <asp:ListItem Value="Resolved">Resolved</asp:ListItem>
@@ -25,22 +24,21 @@
 
     <br />
     <br />
-    <asp:GridView ID="gvDatabase" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="ConcernID" DataSourceID="sqlDataSourceDatabase" ForeColor="Black" GridLines="Vertical" Width="1006px">
+    <asp:GridView ID="gvDatabase" runat="server" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="ConcernID" DataSourceID="sqlDataSourceDatabase" ForeColor="Black" GridLines="Vertical" Width="1006px" AllowPaging="True" OnSorting="gvDatabase_Sorting1">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
-            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+            <asp:CommandField ShowEditButton="True" />
             <asp:BoundField DataField="ConcernID" HeaderText="ConcernID" InsertVisible="False" ReadOnly="True" SortExpression="ConcernID" />
             <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
             <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
-            <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
-            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="Relationship" HeaderText="Relationship" SortExpression="Relationship" />
+            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             <asp:BoundField DataField="InputDate" HeaderText="InputDate" SortExpression="InputDate" />
             <asp:BoundField DataField="Concern" HeaderText="Concern" SortExpression="Concern" />
-            <asp:BoundField DataField="ConcernDetails" HeaderText="ConcernDetails" SortExpression="ConcernDetails" />
             <asp:BoundField DataField="ConcernMade" HeaderText="ConcernMade" SortExpression="ConcernMade" />
             <asp:BoundField DataField="FollowUp" HeaderText="FollowUp" SortExpression="FollowUp" />
             <asp:BoundField DataField="Resolved" HeaderText="Resolved" SortExpression="Resolved" />
+            <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
         </Columns>
         <FooterStyle BackColor="#CCCC99" />
         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -52,35 +50,33 @@
         <SortedDescendingCellStyle BackColor="#EAEAD3" />
         <SortedDescendingHeaderStyle BackColor="#575357" />
     </asp:GridView>
-    <asp:SqlDataSource ID="sqlDataSourceDatabase" runat="server" ConnectionString="<%$ ConnectionStrings:SearchConnectionString %>" SelectCommand="SELECT * FROM [User]" DeleteCommand="DELETE FROM [User] WHERE [ConcernID] = @ConcernID" InsertCommand="INSERT INTO [User] ([FirstName], [LastName], [PhoneNumber], [Email], [Relationship], [InputDate], [Concern], [ConcernDetails], [ConcernMade], [FollowUp], [Resolved]) VALUES (@FirstName, @LastName, @PhoneNumber, @Email, @Relationship, @InputDate, @Concern, @ConcernDetails, @ConcernMade, @FollowUp, @Resolved)" UpdateCommand="UPDATE [User] SET [FirstName] = @FirstName, [LastName] = @LastName, [PhoneNumber] = @PhoneNumber, [Email] = @Email, [Relationship] = @Relationship, [InputDate] = @InputDate, [Concern] = @Concern, [ConcernDetails] = @ConcernDetails, [ConcernMade] = @ConcernMade, [FollowUp] = @FollowUp, [Resolved] = @Resolved WHERE [ConcernID] = @ConcernID">
+    <asp:SqlDataSource ID="sqlDataSourceDatabase" runat="server" ConnectionString="<%$ ConnectionStrings:SearchConnectionString %>" SelectCommand="SELECT [ConcernID], [FirstName], [LastName], [Relationship], [Email], [InputDate], [Concern], [ConcernMade], [FollowUp], [Resolved], [PhoneNumber] FROM [User]" DeleteCommand="DELETE FROM [User] WHERE [ConcernID] = @ConcernID" InsertCommand="INSERT INTO [User] ([FirstName], [LastName], [Relationship], [Email], [InputDate], [Concern], [ConcernMade], [FollowUp], [Resolved], [PhoneNumber]) VALUES (@FirstName, @LastName, @Relationship, @Email, @InputDate, @Concern, @ConcernMade, @FollowUp, @Resolved, @PhoneNumber)" UpdateCommand="UPDATE [User] SET [FirstName] = @FirstName, [LastName] = @LastName, [Relationship] = @Relationship, [Email] = @Email, [InputDate] = @InputDate, [Concern] = @Concern, [ConcernMade] = @ConcernMade, [FollowUp] = @FollowUp, [Resolved] = @Resolved, [PhoneNumber] = @PhoneNumber WHERE [ConcernID] = @ConcernID">
         <DeleteParameters>
             <asp:Parameter Name="ConcernID" Type="Int32" />
         </DeleteParameters>
         <InsertParameters>
             <asp:Parameter Name="FirstName" Type="String" />
             <asp:Parameter Name="LastName" Type="String" />
-            <asp:Parameter Name="PhoneNumber" Type="String" />
-            <asp:Parameter Name="Email" Type="String" />
             <asp:Parameter Name="Relationship" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
             <asp:Parameter Name="InputDate" Type="DateTime" />
             <asp:Parameter Name="Concern" Type="String" />
-            <asp:Parameter Name="ConcernDetails" Type="String" />
             <asp:Parameter Name="ConcernMade" Type="String" />
             <asp:Parameter Name="FollowUp" Type="String" />
             <asp:Parameter Name="Resolved" Type="String" />
+            <asp:Parameter Name="PhoneNumber" Type="String" />
         </InsertParameters>
         <UpdateParameters>
             <asp:Parameter Name="FirstName" Type="String" />
             <asp:Parameter Name="LastName" Type="String" />
-            <asp:Parameter Name="PhoneNumber" Type="String" />
-            <asp:Parameter Name="Email" Type="String" />
             <asp:Parameter Name="Relationship" Type="String" />
+            <asp:Parameter Name="Email" Type="String" />
             <asp:Parameter Name="InputDate" Type="DateTime" />
             <asp:Parameter Name="Concern" Type="String" />
-            <asp:Parameter Name="ConcernDetails" Type="String" />
             <asp:Parameter Name="ConcernMade" Type="String" />
             <asp:Parameter Name="FollowUp" Type="String" />
             <asp:Parameter Name="Resolved" Type="String" />
+            <asp:Parameter Name="PhoneNumber" Type="String" />
             <asp:Parameter Name="ConcernID" Type="Int32" />
         </UpdateParameters>
     </asp:SqlDataSource>

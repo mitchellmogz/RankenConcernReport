@@ -25,6 +25,11 @@ namespace RankenConcernReport
 
         }
 
+        protected void gvDatabase_Sorting(object sender, GridViewSortEventArgs e)
+        {
+          
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -70,7 +75,7 @@ namespace RankenConcernReport
             }
             else
             {
-                gvDatabase.Visible = false;
+               gvDatabase.Visible = false;
               //  Label1.Visible = true;
               //  Label1.Text = "The search Term " + TextBox1.Text + " &nbsp;Is Not Available in the Records"; ;
 
@@ -78,6 +83,14 @@ namespace RankenConcernReport
 
 
 
+        }
+
+        protected void gvDatabase_Sorting1(object sender, GridViewSortEventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.DefaultView.Sort = e.SortExpression;
+            gvDatabase.DataSource = dataTable;
+            gvDatabase.DataBind();
         }
     }
 }
